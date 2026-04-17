@@ -139,6 +139,10 @@ function loadStage(stage) {
   currentStage = stage;
 
   obstacle.style.display = stage >= 3 ? "block" : "none";
+
+  document.querySelectorAll(".stages button").forEach((btn, i) => {
+    btn.classList.toggle("active", i + 1 === stage);
+  });
 }
 
 // ----------------
