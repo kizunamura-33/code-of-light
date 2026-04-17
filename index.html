@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code of Light</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Code of Light 🌙</h1>
+</div>
+
+<div class="stages">
+  <button onclick="loadStage(1)">1</button>
+  <button onclick="loadStage(2)">2</button>
+  <button onclick="loadStage(3)">3</button>
+</div>
+
+<div class="container">
+
+  <!-- ゲームエリア -->
+  <div id="game">
+    <div id="player">🤖</div>
+    <div class="lamp" id="lamp1">💡</div>
+    <div id="obstacle">🪨</div>
+  </div>
+
+  <!-- コードエリア -->
+  <div id="panel">
+    <button onclick="addCommand('moveRight')">→ moveRight()</button>
+    <button onclick="addCommand('lightOn')">💡 lightOn()</button>
+    <button onclick="addCommand('repeat')">🔁 repeat(3)</button>
+    <button onclick="addCommand('if')">🧠 if</button>
+    <button onclick="createFunction()">⚙ 関数作成</button>
+    <button onclick="callFunction()">▶ 関数実行</button>
+
+    <div id="commands"></div>
+  </div>
+
+</div>
+
+<div class="controls">
+  <button onclick="run()">▶ 実行</button>
+  <button onclick="reset()">↺ リセット</button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
